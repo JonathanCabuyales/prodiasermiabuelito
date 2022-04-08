@@ -1,0 +1,131 @@
+<div class="subtitulo">
+    Crear Prueba
+</div>
+<div class="subtitulo">
+    Preguntas Opción multiple
+
+    <svg xmlns="http://www.w3.org/2000/svg" (click)="addpregunta()" style="cursor: pointer;" height="24px"
+        viewBox="0 0 24 24" width="24px" fill="#5e6b69">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+    </svg>
+
+</div>
+
+<div *ngFor="let archivo of listapreguntas; let i=index;">
+
+    <div class="row">
+        <div class="col-sm-8">
+            <span style="font-size: 20px; font-weight: 600; color: #f6851f;">Pregunta {{ i + 1 }}
+                <span title="Eliminar Pregunta" (click)="deletePregunta(i)" style="cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#E51A1A">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                    </svg>
+                </span>
+            </span>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Pregunta</mat-label>
+                <input matInput placeholder="Pregunta" [(ngModel)]="archivo.pregunta">
+            </mat-form-field>
+            <!-- <div>
+                <pre>{{archivo.pregunta}}</pre>
+            </div> -->
+        </div>
+        <div class="col-sm-4">
+            <span style="font-size: 20px; font-weight: 600; color: #000000;">Respuesta Correcta</span>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Respuesta Correcta:</mat-label>
+                <mat-select [(ngModel)]="listapreguntas[i].respuestaCorrecta">
+                    <mat-option value="">Ninguna</mat-option>
+                    <mat-option value="1">Opción 1</mat-option>
+                    <mat-option value="2">Opción 2</mat-option>
+                    <mat-option value="3">Opción 3</mat-option>
+                    <mat-option value="4">Opción 4</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <span style="font-size: 20px; font-weight: 600; color: #000000;">Opción 1</span>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Opción 1</mat-label>
+                <input matInput placeholder="Opción 1" [(ngModel)]="listapreguntas[i].opcion1">
+            </mat-form-field>
+
+        </div>
+        <div class="col-sm-3">
+            <span style="font-size: 20px; font-weight: 600; color: #000000;">Opción 2</span>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Opción 2</mat-label>
+                <input matInput placeholder="Opción 2" [(ngModel)]="listapreguntas[i].opcion2">
+            </mat-form-field>
+
+        </div>
+        <div class="col-sm-3">
+            <span style="font-size: 20px; font-weight: 600; color: #000000;">Opción 3</span>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Opción 3</mat-label>
+                <input matInput placeholder="Opción 3" [(ngModel)]="listapreguntas[i].opcion3">
+            </mat-form-field>
+
+        </div>
+        <div class="col-sm-3">
+            <span style="font-size: 20px; font-weight: 600; color: #000000;">Opción 4</span>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Opción 4</mat-label>
+                <input matInput placeholder="Opción 4" [(ngModel)]="listapreguntas[i].opcion4">
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+<div class="subtitulo">
+    Preguntas Verdadero Falso Nueva
+
+    <svg xmlns="http://www.w3.org/2000/svg" (click)="addverdaderofalso()" style="cursor: pointer;" height="24px"
+        viewBox="0 0 24 24" width="24px" fill="#5e6b69">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+    </svg>
+</div>
+<div *ngFor="let verdaderofalso of listaverdaderofalso; let i=index;">
+    <div class="row">
+        <div class="col-sm-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Pregunta</mat-label>
+                <input matInput placeholder="Pregunta" [(ngModel)]="listaverdaderofalso[i].pregunta">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+            <mat-radio-group aria-label="Select an option">
+                <div class="row">
+                    <br><br>
+                    <div class="col-sm-6">
+                        <mat-radio-button [value]="true" >
+                            Verdadero </mat-radio-button>
+                    </div>
+                    <div class="col-sm-6">
+                        <mat-radio-button  [value]="false" > Falso</mat-radio-button>
+    
+                    </div>
+                </div>
+            </mat-radio-group>
+            
+        </div>
+
+    </div>
+</div>
+
+<div class="cursos__card_button" (click)="guardarPrueba()">
+
+    <h4 style="margin: 0; cursor: pointer;">Guardar Prueba</h4>
+
+</div>

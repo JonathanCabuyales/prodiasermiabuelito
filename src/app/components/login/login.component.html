@@ -1,0 +1,69 @@
+<div class="carousel">
+    <ngb-carousel [interval]="2000">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../../assets/img/banner_10.jpg"  alt="Random slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../../assets/img/banner_12.jpg" alt="Random slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../../assets/img/abuelos3.jpg" alt="Random slide">
+            </div>
+        </ng-template>
+
+    </ngb-carousel>
+</div>
+<br>
+<div class="formulario" id="formulario">
+    <div style="display: flex; text-align: center; justify-content: space-evenly; padding: 20px;">
+        <h2 class="texto-titulos" style="font-weight: 700;">Inicio de sesión</h2> <h2 class="texto-titulos" style="font-weight: 700; cursor: pointer; color: #ffae00;" (click)="register()">REGISTRATE</h2>
+    </div>
+    <!-- <h2 class="texto-titulos" style="padding-top: 5%; font-weight: 700;">Inicio de sesión</h2> <p>REGISTRATE</p> -->
+    <div style="padding: 20px 10%; text-align: center;">
+        <p>Accede a todos nuestros cursos, al finalizar cada uno de ellos obtendras un certificado sin costo.</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-sm" style="align-content: center; text-align: center;">
+
+                <h3><b>Inicio De Sesión</b></h3>
+                <br>
+                <div>
+                    <p><b>Correo: </b></p>
+                    <div class="seccionesFormulario">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-person-fill iconosFormulario" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg><input class="formularioAbuelito" name="nombres" type="text"
+                        style="width: 80%;" placeholder="Correo" autofocus>
+                    </div>
+                    <p><b>Contraseña: </b></p>
+                    <div class="seccionesFormulario">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M21,10h-8.35C11.83,7.67,9.61,6,7,6c-3.31,0-6,2.69-6,6s2.69,6,6,6c2.61,0,4.83-1.67,5.65-4H13l2,2l2-2l2,2l4-4.04L21,10z M7,15c-1.65,0-3-1.35-3-3c0-1.65,1.35-3,3-3s3,1.35,3,3C10,13.65,8.65,15,7,15z"/></g></svg>
+                        <input class="formularioAbuelito" name="nombres" type="password"
+                        style="width: 80%;" placeholder="Contraseña" autofocus>
+                    </div>
+                    <br>
+
+                    <button type="button" class="btn-enviar" (click)="login()">Ingresar</button>
+                    <br>
+                    <br>
+                    <p style="text-decoration: underline; cursor: pointer;" (click)="register()">No tengo cuenta quiero registrarme</p>
+                </div>
+            </div>
+            <div class="col-sm" style="align-content: center; text-align: center; margin-bottom: 25px;">
+                <div class="cajafoto">
+                    <img src="../../../assets/img/close-up-senior-couple-in-love.jpg" width="100%" height="70%" style="text-align: center; margin-top: 10%; border-radius: 10px; box-shadow: 0 0 10px 4px;" alt="Podria ser mi abuelito" title="Podría Ser Mi Abuelito">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

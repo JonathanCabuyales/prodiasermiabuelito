@@ -1,0 +1,811 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman";
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  /* margin: 0px auto; */
+  /* hacer el menu fijo */
+  left: 0;
+  top: 0;
+}
+
+/* seccion del menu */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.headernuevo {
+  width: 100%;
+  padding: 0;
+  background: #ffae00;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logo1 {
+  display: block;
+  height: 100px;
+}
+
+.logo1 img {
+  height: 100%;
+}
+
+.logo1 img:hover {
+  cursor: pointer;
+}
+
+.enlaces1 li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.enlaces1 a {
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 18px;
+  list-style: none;
+  color: black;
+}
+
+.enlaces1 a:hover {
+  cursor: pointer;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+
+/* logo */
+.logo {
+  height: 150px;
+  width: 150px;
+  letter-spacing: 15px;
+  font-size: 1.3em;
+  margin-top: -43px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* seccion pie de pagina */
+
+.center2 {
+  background-color: #ffae00;
+  width: 100%;
+  height: 90px;
+  font-family: "Libre Baskerville", serif;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  /* font-weight: bold; */
+  align-items: center;
+  z-index: 30;
+  top: 0;
+  transition: all 2s ease;
+  color: black;
+}
+
+.footer {
+  /* background-color: #ffae00; */
+  width: 100%;
+}
+
+.botones-footer ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+}
+
+.botones-footer ul li {
+  display: inline-block;
+}
+
+.botones-footer ul li a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  margin: 20px 40px;
+}
+
+.botones-footer ul li a:hover {
+  cursor: pointer;
+  color: burlywood;
+}
+
+.copy-footer ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.copy-footer ul li {
+  display: inline-block;
+}
+
+.copy-footer ul li a {
+  text-decoration: none;
+  margin: 0 40px;
+}
+
+/* 
+  
+  estilos para el carousel
+
+  */
+
+.carousel {
+  margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel img {
+  margin-top: -50px;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* 
+  
+  estilos para la seccionde bienvenida
+  
+  */
+
+/* estilos para las siguientes secciones */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+.subtitulo {
+  color: #f6851f;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.inicio {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.inicio__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.inicio__img {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.inicio__img img {
+  width: 500px;
+  height: 500px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.inicio__parrafo {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* 
+  
+  estilos para el banner inferior
+
+  */
+
+.banner__inferior {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.banner__inferior img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner__inferior_text {
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  top: 200px;
+  color: #fff;
+  font-size: 30px;
+}
+
+
+/* 
+
+estilos para la seccion de beneficiarios
+
+*/
+
+/* Formulario */
+.formulario {
+  height: auto;
+  width: 100%;
+}
+
+.formularioContacto {
+  padding: 5% 20%;
+  height: 100%;
+  width: 100%;
+}
+
+.formularioAbuelito{
+  border: rgb(214, 214, 214);
+  background: #cccccc;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.btn-enviar{
+  border: 1px solid #969696;
+  border-radius: 8px;
+  padding: 10px;
+  width: 60%;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.btn-enviar:hover{
+  background: #ffae00;
+  border-color: #ffae00;
+  color:white;
+}
+
+
+/* imagenes mision y vision  */
+
+.img-mv {
+  height: 100%;
+  width: 100%;
+}
+
+.img-mision-vision {
+  height: 300px;
+  width: 300px;
+  margin-left: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 15px 30px #bdbcbc;
+}
+
+.img-mision-vision-inicio {
+  height: 400px;
+  width: 400px;
+  margin-left: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 15px 5px #bdbcbc;
+  margin-top: 5%;
+  object-fit: cover;
+  transition: transform 1.05s;
+}
+
+.img-mision-vision-inicio:hover {
+  transform: scale(1.1);
+}
+
+/* Menu valores */
+.valores {
+  box-sizing: border-box;
+  background-color: #ffae00;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.img-valores {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+}
+
+.menu-valores {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.menu-valores ul {
+  text-align: center;
+  margin: 0;
+}
+
+.menu-valores ul li {
+  display: inline-block;
+  color: white;
+}
+
+.menu-valores ul li a {
+  display: block;
+  text-decoration: none;
+  margin: 20px 40px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.seccion-qs-2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgb(56, 56, 56), rgba(44, 44, 44, 0.425)),
+    url(assets/img/1.jpg);
+  background-position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.texto-secciones2 {
+  font-size: 42px;
+  text-align: center;
+  color: white;
+  margin-top: 125px;
+  font-weight: 700;
+}
+
+/* boton de whatsapp */
+.float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 130px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 36px;
+  z-index: 100;
+}
+.float:hover {
+  text-decoration: none;
+  color: #25d366;
+  background-color: #fff;
+}
+
+
+.custom-dialog-container .mat-dialog-container {
+  padding: 0px;
+  border-radius: 20px;
+  background-color: #0000008a;
+}
+
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.836);
+}
+
+/* 
+
+estilos para la seccion de cursos.
+
+*/
+
+.container__cursos{
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.cursos__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.cursos__card {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.cursos__card_title{
+  color: #f6851f;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px;
+}
+
+.cursos__card_description{
+  text-align: justify;
+  padding: 5px;
+  height: 170px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.cursos__card_button{
+  margin: 10px auto;
+  width: 80%;
+  background-color: #ffae00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.cursos__card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cursos__input input {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #ffae00;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 17px;
+  font-weight: 700;
+  outline: none;
+  background-color: #fff;
+  color: #000000;
+}
+
+.mat-elevation-z8{
+  width: 98%;
+  margin: 0 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+/* estilos para los inputs de angular */
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #ffae00 !important;
+}
+
+.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #ffae00 !important;
+}
+
+.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #ffae00 !important;
+}
+
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  background-color: #5e6b69;
+  padding: 7px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+
+/* 
+
+menu responsive 
+
+*/
+
+/* seccion responsive de la pagina */
+@media only screen and (max-width: 320px) {
+  
+  .carousel{
+    height: 200px;
+  }
+
+  .botones-footer ul li {
+    display: block;
+  }
+
+  .botones-footer ul li a {
+    margin: 0px 10px;
+  }
+
+  .copy-footer {
+    display: block;
+  }
+
+  .center2 {
+    height: 120px;
+  }
+
+  .texto-secciones {
+    font-size: 44px;
+    text-align: center;
+    color: white;
+    margin-top: 155px;
+  }
+
+  .texto-secciones2 {
+    font-size: 42px;
+    text-align: center;
+    color: white;
+    margin-top: 125px;
+    font-weight: 700;
+  }
+
+  .img-mision-vision {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+  }
+
+  .img-mision-vision-inicio {
+    height: 200px;
+    width: 200px;
+    margin-left: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 15px 5px #bdbcbc;
+    margin-top: 5%;
+    object-fit: cover;
+    margin-bottom: 25px;
+  }
+
+  .texto-secciones3 {
+    font-size: 40px;
+    color: white;
+    margin-top: 70px;
+  }
+
+  .caja1 {
+    display: block;
+    margin: 0%;
+    min-width: 100%;
+    padding: 10%;
+  }
+
+  .inicioFondo h2 {
+    padding-top: 40%;
+  }
+
+  .inicio {
+    margin-top: 120px;
+    padding: 20px 40px;
+  }
+
+  .inicio__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .carousel{
+    height: 200px;
+  }
+
+
+  .img-mision-vision-inicio {
+    height: 300px;
+    width: 300px;
+    margin-top: 5%;
+    object-fit: cover;
+    margin-bottom: 25px;
+  }
+
+  .texto-secciones2 {
+    font-size: 42px;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+  }
+
+  .inicio {
+    margin-top: 120px;
+    padding: 20px 40px;
+  }
+
+  .inicio__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  .carousel{
+    height: 200px;
+  }
+
+
+  .botones-footer ul li {
+    display: block;
+  }
+
+  .botones-footer ul li a {
+    margin: 0px 10px;
+  }
+
+  .center2 {
+    height: 120px;
+  }
+
+  .texto-secciones {
+    font-size: 44px;
+    text-align: center;
+    color: white;
+    margin-top: 155px;
+  }
+
+  .texto-secciones2 {
+    font-size: 42px;
+    text-align: center;
+    color: white;
+    margin-top: 125px;
+  }
+
+  .quienessomoFondo h2 {
+    padding-top: 52%;
+  }
+
+  .formularioFondo h2 {
+    padding-top: 52%;
+  }
+
+  .img-mision-vision {
+    height: 270px;
+    width: 270px;
+    border-radius: 20%;
+  }
+
+  .img-mision-vision-inicio {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 15px 5px #bdbcbc;
+    margin-top: 5%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  .texto-secciones3 {
+    font-size: 40px;
+    color: white;
+    margin-top: 35px;
+  }
+
+  .inicioFondo h2 {
+    padding-top: 49%;
+  }
+
+  .inicio {
+    margin-top: 120px;
+    padding: 20px 40px;
+  }
+
+  .inicio__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+  
+}
+
+/* menu responsive */
+
+@media only screen and (max-width: 860px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .enlaces1 {
+    left: 0;
+    width: 80%;
+    display: block;
+    position: absolute;
+    transition: all 0.5s;
+  }
+
+  .enlaces1 ul {
+    display: none;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .enlaces1 ul.show {
+    margin: 250px 0 0 0;
+    display: block;
+  }
+
+  .enlaces1 li {
+    display: block;
+    padding: 5px;
+    background-color: #ffae00;
+  }
+
+  .inicio {
+    margin-top: 120px;
+    padding: 20px 40px;
+  }
+
+  .inicio__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+
+  .inicio__img img{
+    width: 240px;
+    height: 240px;
+  }
+
+  .carousel img{
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+}

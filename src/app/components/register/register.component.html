@@ -1,0 +1,137 @@
+<div class="carousel">
+    <ngb-carousel [interval]="2000" [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper" style="width: 100%; height: 40%;">
+                <img src="../../../assets/img/banner.jfif"  alt="Random slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../../assets/img/abuelos2.jpg" alt="Random slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img src="../../../assets/img/abuelos3.jpg" alt="Random slide">
+            </div>
+        </ng-template>
+
+    </ngb-carousel>
+</div>
+<div class="formulario">
+    <div style="display: flex; text-align: center; justify-content: space-evenly; padding: 20px;">
+        <h2 class="texto-titulos" style="font-weight: 700;">Registro</h2>
+    </div>
+    <!-- <h2 class="texto-titulos" style="padding-top: 5%; font-weight: 700;">Inicio de sesión</h2> <p>REGISTRATE</p> -->
+    <div style="padding: 20px 10%; text-align: center;">
+        <p>Accede a todos nuestros cursos, al finalizar cada uno de ellos obtendrás un certificado sin costo.</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" style="align-content: center;">
+
+                <br>
+                <div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><b>Nombres: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" name="Nombres" type="text" 
+                                    placeholder="Nombres" [(ngModel)]="usuario.nombres_usu" autofocus>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><b>Apellidos: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" name="Apellidos" type="text" 
+                                    placeholder="Apellidos" [(ngModel)]="usuario.apellidos_usu" >
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><b>Dirección: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="text" 
+                                    placeholder="Dirección" [(ngModel)]="usuario.direccion_usu" >
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><b>Número Contacto: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="text" 
+                                    placeholder="Número Contacto" [(ngModel)]="usuario.numero_usu">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><b>Cédula: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="text" 
+                                    placeholder="Cédula" [(ngModel)]="usuario.cedula_usu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><b>Correo: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="text" 
+                                    placeholder="Correo" [(ngModel)]="usuario.correo_usu">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><b>Contraseña: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="password" 
+                                    placeholder="Contraseña" [(ngModel)]="usuario.password_usu">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><b>Cédula Escaneada: </b> *para finalizar el registro por favor adjunta tu cédula de identidad (ambos lados) en formato PDF o Fotografía nítida</p>
+                            <br>
+                            <p><b>Cédula PDF: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="file" accept="application/pdf" (change)="uploadFile($event, 'pdf')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><b>Cédula Imgen derecho: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="file" accept="image/png, image/gif, image/jpeg" (change)="uploadFile($event, 'img1')">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><b>Cédula Imagen revés: </b></p>
+                            <div class="seccionesFormulario">
+                                <input class="formularioAbuelito" type="file" accept="image/png, image/gif, image/jpeg" (change)="uploadFile($event, 'img2')">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="button" class="btn-enviar" style="width: 100%;" (click)="register()">Registrarse</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+
+        </div>
+    </div>
+</div>
